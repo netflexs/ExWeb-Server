@@ -1,0 +1,28 @@
+{
+  "name": "exweb-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netflexs/ExWeb-Server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/netflexs/ExWeb-Server/issues"
+  },
+  "homepage": "https://github.com/netflexs/ExWeb-Server#readme",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "chalk": "^5.2.0",
+    "clui": "^0.3.6",
+    "express": "^4.18.2",
+    "figlet": "^1.5.2",
+    "php": "^1.0.2",
+    "php-express": "^0.0.3"
+  }
+}

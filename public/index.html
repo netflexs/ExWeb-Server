@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: radial-gradient(pink, violet, rgb(202, 46, 202));
+            font-family: 'Fantasy';
+            background-size: 'cover';
+        }
+
+        .hero {
+            margin-top: 15%;
+            text-align: center;
+            font-family: 'Times New Roman';
+        }
+
+        .hero h1 {
+            font-size: 300px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 40px;
+            padding: 0;
+            margin: 0;
+        }
+
+        .about {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .about h2 {
+            font-size: 65px;
+            padding: 0;
+            margin-top: 30%;
+            text-align: center;
+        }
+
+        .about p {
+            padding: 0;
+            padding-left: 10px;
+        }
+
+        .contact {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: right;
+            margin-top: 10%
+        }
+
+        nav {
+            background-color: #7b3fa6;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            font-family: 'Segoe UI';
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="preloader">
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+        <div class="loading-bar"></div>
+    </div>
+
+
+    <nav>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="hero" id="Home">
+        <h1>RE:han</h1>
+        <p>The World In Our Hand</p>
+    </div>
+    <div class="about" id="About">
+        <h2>About Project</h2>
+        <p>Project was made by Tegar inspired from Fathir and Rehan</p>
+        <p>This project may cannot be continued cause ive been stucked on my mind learning html and yeah just this xD
+        </p>
+    </div>
+
+    <div class="contact" id="Contact">
+        <h3>Contact Me!!</h3>
+        <p>Email : netflexs@proton.me</p>
+    </div>
+
+    <script>
+
+
+
+        // Select all the links in the navigation
+        const navLinks = document.querySelectorAll("nav a");
+
+        // Add an event listener to each link
+        navLinks.forEach((link) => {
+            link.addEventListener("click", (event) => {
+                // Prevent the default behavior of the link (jumping to the target)
+                event.preventDefault();
+
+                // Get the target element based on the link's href
+                const targetId = event.target.getAttribute("href");
+                const targetElement = document.querySelector(targetId);
+
+                // Animate the scroll to the target element
+                window.scroll({
+                    top: targetElement.offsetTop,
+                    behavior: "smooth",
+                });
+            });
+        });
+
+    </script>
+
+    
+</body>
+
+</html>
