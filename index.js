@@ -3,8 +3,12 @@ const Clui = require("clui");
 const app = express();
 const fs = require('fs');
 const phpExpress = require("php-express")(express);
+const prompt = require('prompt-sync')();
 
-const port = 3000;
+const port = prompt("PORT : ")
+
+
+console.clear();
 
 const Spinner = Clui.Spinner;
 const directory = './public';
@@ -49,6 +53,7 @@ fs.watch(directory, (eventType, filename) => {
     }
     spinner.start();
   });
+
 
 app.listen(port, () => {
     console.log(`
